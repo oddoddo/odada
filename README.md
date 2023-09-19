@@ -1,14 +1,15 @@
 # odd:odd
 - 프론트엔드, 웹접근성, 인터랙션, 반응형, UI/UX, 웹퍼블리싱
-- #React, #Javascript, #Responsive, #SASS, #Html5 #css3 #Figma #Photoshop
+- #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 
 #  Daum Service
 - <img src="http://eehd80.dothome.co.kr/imgs/intro/logo-daumkakao.png" alt="daumkakao" />
 - Daum, kakao UI개발
-- #Javascript, #Responsive, #SASS, #Html5 #css3 #Figma #Photoshop
+- #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 
-
-
+# 프론트엔드 & UIUX디자인 강사
+- 그린컴퓨터아카데미, 더조은아카데미, 이젠컴퓨터아카데미 경력
+- #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 ---
 
 <div id="profile" class="container-fluid text-center bg-grey">
