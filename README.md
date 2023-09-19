@@ -4,7 +4,7 @@
 
 #  Daum Service
 <img src="http://eehd80.dothome.co.kr/imgs/intro/logo-daumkakao.png" alt="daumkakao" />
-- Daum, kakao UI개발 <br>
+- Daum, kakao UI개발
 - #Javascript, #Responsive, #SASS, #Html5 #css3 #Figma #Photoshop
 
 
