@@ -8,6 +8,9 @@
 - #Javascript, #Responsive, #SASS, #Html5 #css3 #Figma #Photoshop
 
 
+
+---
+
 <div id="profile" class="container-fluid text-center bg-grey">
                 <ul class="lst-profile">
                     <li>
