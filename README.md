@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="http://eehd80.dothome.co.kr/css/comm.css" />
 
 <div id="profile" class="container-fluid text-center bg-grey">
-                <h2 class="blind">Portfolio</h2>
                 <ul class="lst-profile">
                     <li>
                         <a href="./portfolio-flato.html" class="thumbnail">
