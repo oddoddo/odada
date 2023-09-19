@@ -10,6 +10,8 @@
 # 프론트엔드 & UIUX디자인 강사
 - 그린컴퓨터아카데미, 더조은아카데미, 이젠컴퓨터아카데미 경력
 - #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
+
+  
 ---
 
 <div id="profile" class="container-fluid text-center bg-grey">
