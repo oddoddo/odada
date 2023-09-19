@@ -9,7 +9,7 @@
 - Daum, kakao UI Development Team
 - #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 
-## Frontend & UIUX Design Instructor
+## Frontend & UI/UX Design Instructor
 - 그린컴퓨터아카데미, 더조은아카데미, 이젠컴퓨터아카데미 경력
 - #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 
