@@ -2,7 +2,7 @@
 
 ## odd:odd
 - Frontend, Web Accessibility, Interaction, Responsive, UI/UX Design, Web Publishing
-- <img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=white"/>
+- <img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=white&fontColor=white"/>
 
 #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 - 프로젝트 보기
