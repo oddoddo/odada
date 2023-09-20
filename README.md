@@ -4,12 +4,12 @@
 - Frontend, Web Accessibility, Interaction, Responsive, UI/UX Design, Web Publishing
 - <img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=white"/>, <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat&logo=Javascript&logoColor=white"/>, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
 - 프로젝트 보기
-
+<br><br>
 ## Daum Service
 - <img src="http://eehd80.dothome.co.kr/imgs/intro/logo-daumkakao.png" alt="daumkakao" />
 - Daum, kakao UI Development Team
 - #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
-
+<br><br>
 ## Frontend & UI/UX Design Instructor
 - 그린컴퓨터아카데미, 더조은아카데미, 이젠컴퓨터아카데미 경력
 - #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
