@@ -1,10 +1,11 @@
 ![header](https://capsule-render.vercel.app/api?type=transparent&color=auto&height=200&section=header&text=odada%20profile&fontSize=40)
 
-# odada profile 
-
 ## odd:odd
 - Frontend, Web Accessibility, Interaction, Responsive, UI/UX Design, Web Publishing
-- #React, #Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
+- <img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=white"/>
+
+#Javascript, #Responsive, #sass, #html5 #css3 #Figma #Photoshop
+- 프로젝트 보기
 
 ## Daum Service
 - <img src="http://eehd80.dothome.co.kr/imgs/intro/logo-daumkakao.png" alt="daumkakao" />
