@@ -1,132 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
-@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 // @import url("https://fonts.googleapis.com/css?family=Raleway:400,500,700,900&display=swap");
 
-$red: #d33c4a;
+@import 'variables', 'mixin', 'reset';
 
-/* reset */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-textarea,
-p,
-blockquote,
-th,
-td,
-input,
-select,
-textarea,
-button,
-header,
-main,
-article,
-footer,
-i {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-fieldset,
-img {
-    border: 0 none;
-}
-dl,
-ul,
-ol,
-menu,
-li {
-    list-style: none;
-}
-blockquote,
-q {
-    quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: "";
-    content: none;
-}
-input,
-select,
-textarea,
-button {
-    vertical-align: middle;
-}
-button {
-    border: 0 none;
-    background-color: transparent;
-    cursor: pointer;
-}
-body {
-    background: #fff;
-}
-body,
-th,
-td,
-input,
-select,
-textarea,
-button {
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Baloo 2", "Malgun Gothic", "Apple Gothic", sans-serif;
-    color: #333;
-} /* color값은 디자인가이드에 맞게사용 */
-a {
-    color: #333;
-    text-decoration: none;
-}
-a:active,
-a:hover {
-    text-decoration: underline;
-}
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-var {
-    font-style: normal;
-    font-weight: normal;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-body {
-	background: #fff;
-/*
-    background-attachment: fixed, fixed, fixed;
-    background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, $red 40%, #4fa49a 75%, #9dc66b);
-    background-position: top left, center center, center center;
-    background-size: auto, cover, cover;
-*/
-}
-
-.blind {
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
+.wrap {
+    padding-top: 110px;
+    padding-bottom: 70px;
 }
 
 .navbar-header {
@@ -135,16 +15,14 @@ body {
 
 .navbar {
     width: 100%;
+    height: 70px;
     margin-bottom: 0;
-    background: #fff;
     letter-spacing: 0;
     border: 0;
     transition: all 0.3s;
     border-radius: 0;
-    // background-attachment: fixed, fixed, fixed;
-    // background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, $red 40%, #4fa49a 75%, #9dc66b);
-    // background-position: top left, center center, center center;
-    // background-size: auto, cover, cover;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: saturate(180%) blur(8px);
     .container {
         width: 95% !important;
         max-width: 1280px;
@@ -158,9 +36,10 @@ body {
         margin-left: 0 !important;
         padding: 0;
         color: #000;
-        font-family: "Baloo 2", "cursive";
+        font-family: 'Comfortaa', 'cursive';
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 600;
+        letter-spacing: -1px;
         // letter-spacing: -1px;
         line-height: normal;
         span {
@@ -170,16 +49,8 @@ body {
             display: inline-block;
             margin: -3px 20px 0;
             color: #d45560;
-            font-family: "Lato", sans-serif;
+            font-family: 'Lato', sans-serif;
             vertical-align: middle;
-        }
-    }
-    .navbar-nav {
-        margin-right: 20px;
-        li.on {
-            a {
-                color: #d45560;
-            }
         }
     }
     .navbar-nav > li > a {
@@ -187,16 +58,16 @@ body {
         justify-content: center;
         align-items: center;
         padding: 0 20px;
-        color: #000;
+        color: rgba($b, 0.7);
         height: 70px;
+        font-size: 16px;
     }
 }
 
 .navbar-nav li {
     a:hover,
     &.active a {
-        color: $red !important;
-        background-color: #fff !important;
+        color: $b !important;
     }
 }
 
@@ -217,6 +88,21 @@ body {
     border-color: transparent;
     color: #fff !important;
 }
+
+.lst-profile {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+        width: 30%;
+        margin-bottom: 50px;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
 .nav-tabs > li {
     > a {
         font-size: 1.6rem;
@@ -229,12 +115,18 @@ body {
         }
     }
 }
+.nav-link {
+    color: rgba($b, 0.6);
+}
 .nav-tabs > li > a:hover {
     background-color: #d45560;
 }
 .tab-content {
     padding: 50px;
-    background-color: #f7f7f7;
+    background-color: $w;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .intro {
@@ -289,7 +181,6 @@ footer {
     // overflow-y: auto;
     // height: calc(100vh - 200px);
     padding-top: 50px;
-    background-color: transparent;
 }
 
 /* text animate */
@@ -300,17 +191,16 @@ footer {
     padding: 0 40px;
     /*-webkit-transform: translate(-50%, -50%);*/
     /*transform: translate(-50%, -50%);*/
-    font-family: "Lato", sans-serif;
     font-size: 6em;
     color: #ecf0f1;
     font-weight: 600;
     &:before {
-        content: "{";
+        content: '{';
         left: -10px;
         color: #16a085;
     }
     &:after {
-        content: "}";
+        content: '}';
         position: absolute;
         right: 0;
         color: $red;
@@ -376,7 +266,7 @@ footer {
 }
 
 .container-fluid {
-    max-width: 1280px;
+    // max-width: 1280px;
     // padding: 0 8%;
     .row {
         overflow: hidden;
@@ -409,21 +299,23 @@ footer {
     border-radius: 0;
     background-color: transparent;
     h3 {
-        font-size: 2rem;
-        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        font-size: 1.1rem;
     }
     p {
+        font-size: 0.95rem;
         margin: 10px 0;
-        color: #fff;
         opacity: 0.8;
     }
     .image {
         overflow: hidden;
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-        margin: 0 0 2em 0;
+        margin: 0 0 30px 0;
         width: 100%;
         height: 150px;
         border: 1px solid rgba(238, 238, 238, 0.7);
@@ -432,16 +324,15 @@ footer {
     }
     img {
         width: auto;
-        height: 80%;
+        height: auto;
         margin-bottom: 10px;
         transition: all 0.3s;
+        transform: scale(0.8);
     }
     &:hover img {
         transform: scale(1.1);
     }
-    .daum img {
-        width: 30%;
-    }
+
     p {
         display: flex;
         justify-content: center;
@@ -449,9 +340,10 @@ footer {
         height: 45px;
     }
     .hashtag {
-        margin-right: 10px;
-        color: #fff;
+        margin-right: 7px;
         opacity: 0.5;
+        font-size: 0.85rem;
+        word-break: keep-all;
     }
 }
 
@@ -471,11 +363,10 @@ footer {
 .box-explain {
     display: flex;
     margin-bottom: 30px;
-    padding: 15px 40px 10px;
+    padding: 10px 0 10px;
     text-align: left;
     background: #fff;
-    border: 1px solid #ddd;
-    border-top: 3px solid $red;
+    border-top: 3px solid #444;
     dl {
         display: flex;
         justify-content: space-between;

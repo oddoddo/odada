@@ -28,13 +28,7 @@ th,
 td,
 input,
 select,
-textarea,
-button,
-header,
-main,
-article,
-footer,
-i {
+button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -58,51 +52,87 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
   content: "";
   content: none;
 }
 
 input,
 select,
-textarea,
-button {
+textarea {
+  font-size: 100%;
   vertical-align: middle;
 }
 
 button {
+  font-size: 100%;
+  vertical-align: middle;
   border: 0 none;
   background-color: transparent;
   cursor: pointer;
 }
 
-body {
-  background: #fff;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-body,
-th,
-td,
-input,
-select,
-textarea,
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
 button {
-  font-size: 16px;
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 14px;
   line-height: 1.5;
-  font-family: "Baloo 2", "Malgun Gothic", "Apple Gothic", sans-serif;
-  color: #333;
-} /* color값은 디자인가이드에 맞게사용 */
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
 a {
   color: #333;
   text-decoration: none;
 }
-
-a:active,
-a:hover {
-  text-decoration: underline;
+a:active, a:hover {
+  text-decoration: none;
 }
 
 address,
@@ -116,24 +146,121 @@ var {
   font-weight: normal;
 }
 
-a:hover {
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
   text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
 }
 
-body {
-  background: #fff;
-  /*
-      background-attachment: fixed, fixed, fixed;
-      background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, $red 40%, #4fa49a 75%, #9dc66b);
-      background-position: top left, center center, center center;
-      background-size: auto, cover, cover;
-  */
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
 }
 
-.blind {
-  font-size: 0;
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
   line-height: 0;
   text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+.wrap {
+  padding-top: 110px;
+  padding-bottom: 70px;
 }
 
 .navbar-header {
@@ -142,12 +269,15 @@ body {
 
 .navbar {
   width: 100%;
+  height: 70px;
   margin-bottom: 0;
-  background: #fff;
   letter-spacing: 0;
   border: 0;
   transition: all 0.3s;
   border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+          backdrop-filter: saturate(180%) blur(8px);
 }
 .navbar .container {
   width: 95% !important;
@@ -162,9 +292,10 @@ body {
   margin-left: 0 !important;
   padding: 0;
   color: #000;
-  font-family: "Baloo 2", "cursive";
+  font-family: "Comfortaa", "cursive";
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 600;
+  letter-spacing: -1px;
   line-height: normal;
 }
 .navbar .navbar-brand span {
@@ -177,24 +308,18 @@ body {
   font-family: "Lato", sans-serif;
   vertical-align: middle;
 }
-.navbar .navbar-nav {
-  margin-right: 20px;
-}
-.navbar .navbar-nav li.on a {
-  color: #d45560;
-}
 .navbar .navbar-nav > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  color: #000;
+  color: rgba(0, 0, 0, 0.7);
   height: 70px;
+  font-size: 16px;
 }
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
-  color: #d33c4a !important;
-  background-color: #fff !important;
+  color: #000 !important;
 }
 
 .contents {
@@ -215,6 +340,20 @@ body {
   color: #fff !important;
 }
 
+.lst-profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lst-profile li {
+  width: 30%;
+  margin-bottom: 50px;
+}
+.lst-profile img {
+  display: block;
+  width: 100%;
+}
+
 .nav-tabs > li > a {
   font-size: 1.6rem;
   font-weight: 400;
@@ -224,13 +363,20 @@ body {
   background-color: #f7f7f7;
 }
 
+.nav-link {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .nav-tabs > li > a:hover {
   background-color: #d45560;
 }
 
 .tab-content {
   padding: 50px;
-  background-color: #f7f7f7;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .intro {
@@ -278,7 +424,6 @@ footer {
 
 #portfolio {
   padding-top: 50px;
-  background-color: transparent;
 }
 
 /* text animate */
@@ -288,7 +433,6 @@ footer {
   padding: 0 40px;
   /*-webkit-transform: translate(-50%, -50%);*/
   /*transform: translate(-50%, -50%);*/
-  font-family: "Lato", sans-serif;
   font-size: 6em;
   color: #ecf0f1;
   font-weight: 600;
@@ -302,7 +446,7 @@ footer {
   content: "}";
   position: absolute;
   right: 0;
-  color: #d33c4a;
+  color: #f00;
   position: absolute;
   top: 13px;
   font-size: 0.7em;
@@ -363,9 +507,6 @@ footer {
   font-family: Montserrat, sans-serif;
 }
 
-.container-fluid {
-  max-width: 1280px;
-}
 .container-fluid .row {
   overflow: hidden;
   margin-bottom: 30px;
@@ -397,21 +538,23 @@ footer {
   background-color: transparent;
 }
 .thumbnail h3 {
-  font-size: 2rem;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  font-size: 1.1rem;
 }
 .thumbnail p {
+  font-size: 0.95rem;
   margin: 10px 0;
-  color: #fff;
   opacity: 0.8;
 }
 .thumbnail .image {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  margin: 0 0 2em 0;
+  margin: 0 0 30px 0;
   width: 100%;
   height: 150px;
   border: 1px solid rgba(238, 238, 238, 0.7);
@@ -420,15 +563,13 @@ footer {
 }
 .thumbnail img {
   width: auto;
-  height: 80%;
+  height: auto;
   margin-bottom: 10px;
   transition: all 0.3s;
+  transform: scale(0.8);
 }
 .thumbnail:hover img {
   transform: scale(1.1);
-}
-.thumbnail .daum img {
-  width: 30%;
 }
 .thumbnail p {
   display: flex;
@@ -437,9 +578,10 @@ footer {
   height: 45px;
 }
 .thumbnail .hashtag {
-  margin-right: 10px;
-  color: #fff;
+  margin-right: 7px;
   opacity: 0.5;
+  font-size: 0.85rem;
+  word-break: keep-all;
 }
 
 footer {
@@ -458,11 +600,10 @@ footer .glyphicon {
 .box-explain {
   display: flex;
   margin-bottom: 30px;
-  padding: 15px 40px 10px;
+  padding: 10px 0 10px;
   text-align: left;
   background: #fff;
-  border: 1px solid #ddd;
-  border-top: 3px solid #d33c4a;
+  border-top: 3px solid #444;
 }
 .box-explain dl {
   display: flex;
