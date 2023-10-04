@@ -536,6 +536,7 @@ footer {
   border: none;
   border-radius: 0;
   background-color: transparent;
+  pointer-events: none;
 }
 .thumbnail h3 {
   display: flex;
@@ -567,9 +568,6 @@ footer {
   margin-bottom: 10px;
   transition: all 0.3s;
   transform: scale(0.8);
-}
-.thumbnail:hover img {
-  transform: scale(1.1);
 }
 .thumbnail p {
   display: flex;
