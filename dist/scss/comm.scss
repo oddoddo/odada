@@ -4,6 +4,15 @@
 
 @import 'variables', 'mixin', 'reset';
 
+.oddodd {
+    font-family: 'Comfortaa', 'cursive';
+    font-size: 30px;
+    font-weight: 300;
+    span {
+        font-weight: 700;
+    }
+}
+
 .wrap {
     padding-top: 110px;
     padding-bottom: 70px;
