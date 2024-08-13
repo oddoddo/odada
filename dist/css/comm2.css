@@ -123,7 +123,7 @@ body {
     background: #fff;
     font-size: 14px;
     line-height: 1.5;
-    font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
     font-weight: 400;
     color: #222;
 }
@@ -276,9 +276,21 @@ legend {
     font-weight: 700;
 }
 
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
 .wrap {
-    padding-top: 110px;
+    /* padding-top: 110px; */
     padding-bottom: 70px;
+}
+
+.tit-name {
+    display: block;
+    margin-bottom: 100px;
+    font-size: 46px;
+    text-align: center;
 }
 
 .navbar-header {
@@ -359,6 +371,10 @@ legend {
     color: #fff !important;
 }
 
+#profile {
+    padding: 100px 0 50px;
+}
+
 .lst-profile {
     display: flex;
     justify-content: space-between;
@@ -390,12 +406,38 @@ legend {
     background-color: #d45560;
 }
 
+#portfolio .wrap-explain {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#portfolio h2 {
+    display: block;
+    margin: 50px 0;
+    font-size: 34px;
+}
+#portfolio .wrap-project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+}
+#portfolio .box-explain {
+    flex-direction: column;
+}
+#portfolio img {
+    width: 100%;
+    border-radius: 12px;
+    height: 300px;
+    object-fit: cover;
+    object-position: left top;
+}
+#portfolio .box-img {
+    display: none;
+}
+
 .tab-content {
-    padding: 50px;
     background-color: #fff;
-    border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 
 .intro {
@@ -563,6 +605,7 @@ footer {
     justify-content: center;
     height: 42px;
     font-size: 1.1rem;
+    text-align: center;
 }
 .thumbnail p {
     font-size: 0.95rem;
@@ -620,16 +663,16 @@ footer .glyphicon {
     padding: 10px 0 10px;
     text-align: left;
     background: #fff;
-    border-top: 3px solid #444;
+    /* border-top: 3px solid #444; */
 }
 .box-explain dl {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 50%;
     margin: 0;
 }
 .box-explain dt {
+    display: none;
     width: 20%;
     height: 26px;
     margin-bottom: 5px;
@@ -842,4 +885,4 @@ footer .glyphicon {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-} /*# sourceMappingURL=comm.css.map */
+}
