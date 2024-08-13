@@ -288,8 +288,8 @@ legend {
 
 .tit-name {
     display: block;
-    margin-bottom: 100px;
-    font-size: 46px;
+    margin-bottom: 100px !important;
+    font-size: 46px !important;
     text-align: center;
 }
 
@@ -371,12 +371,8 @@ legend {
     color: #fff !important;
 }
 
-#profile {
-    padding: 100px 0 50px;
-}
-
 .lst-profile {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -420,15 +416,16 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 30%;
+    width: 23%;
 }
 #portfolio .box-explain {
     flex-direction: column;
 }
 #portfolio img {
-    width: 100%;
+    max-width: 100% !important;
+    width: 100% !important;
     border-radius: 12px;
-    height: 300px;
+    height: 300px !important;
     object-fit: cover;
     object-position: left top;
 }
@@ -593,6 +590,7 @@ footer {
 }
 
 .thumbnail {
+    display: block !important;
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
@@ -604,8 +602,10 @@ footer {
     align-items: center;
     justify-content: center;
     height: 42px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
+    font-weight: 600;
+    margin: 0;
 }
 .thumbnail p {
     font-size: 0.95rem;
@@ -620,9 +620,10 @@ footer {
     margin: 0 0 30px 0;
     width: 100%;
     height: 150px;
-    border: 1px solid rgba(238, 238, 238, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background: #fff;
+    color: #222;
 }
 .thumbnail img {
     width: auto;
@@ -636,12 +637,14 @@ footer {
     justify-content: center;
     align-items: center;
     height: 45px;
+    text-align: center;
 }
 .thumbnail .hashtag {
     margin-right: 7px;
     opacity: 0.5;
     font-size: 0.85rem;
     word-break: keep-all;
+    color: #333;
 }
 
 footer {
